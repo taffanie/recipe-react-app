@@ -22,15 +22,15 @@
 .recipes {
   max-width: 250px;
   display: flex;
-  display: -webkit-flex;
   justify-content: center;
-  -webkit-justify-content: center;
+  align-items: left;
   margin-bottom: 10px;
 }
 
 .recipe {
   border-radius: 12px;
   background-color: white;
+  position: relative;
 }
 
 .image {
@@ -46,7 +46,7 @@
 }
 
 /* .image:hover {
-  opacity: 0.3;
+  opacity: 0.8;
 } */
 
 .title {
@@ -77,4 +77,47 @@
   font-weight: 600;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.overlay {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+  overflow: scroll;
+}
+
+.recipes:hover .overlay {
+  opacity: 0.8;
+}
+
+/* .text h4 {
+  color: black;
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+}
+
+.text {
+  padding-right: 16px;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
 }
