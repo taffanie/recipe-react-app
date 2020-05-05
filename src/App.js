@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe';
 import './App.css';
+import Logo from './recipeLogo.png';
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
 
   return(
     <div className="App">
+      <img src={Logo} alt="logo" className="logo"/>
       <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" placeholder="Search recipes..." value={search} onChange={updateSearch}/>
         <button className="search-button" type="submit">Search</button>
